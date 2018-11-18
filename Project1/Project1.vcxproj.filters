@@ -29,5 +29,14 @@
     <ClInclude Include="degree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="software.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="networking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="security.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
