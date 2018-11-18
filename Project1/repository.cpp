@@ -5,7 +5,7 @@ using std::cerr;
 
 Repository::Repository() {
 	this->capacity = 0;
-	this->lastIndex = -1;
+	this->lastIndex = -1;asdf
 	this->degrees = nullptr;
 }
 
