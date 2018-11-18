@@ -5,7 +5,7 @@
 
 using std::string;
 const int numBooks = 5;
-string bookData[numBooks] =
+string studentData[numBooks] =
 {
 	"A1,John,Smith,John1989@gmail.com,20,30,35,40,SECURITY",
 	"A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
