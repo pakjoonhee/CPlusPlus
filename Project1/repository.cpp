@@ -1,7 +1,11 @@
 #include <iostream>
 #include "repository.h"
+#include "security.h"
+#include "software.h"
+#include "networking.h"
 using std::cout;
 using std::cerr;
+using std::string;
 
 Repository::Repository() {
 	this->capacity = 0;
@@ -18,19 +22,24 @@ Repository::Repository(int capacity) {
 void Repository::parseAdd(string row) {
 	if (lastIndex < capacity) {
 		lastIndex++;
-		double parray[Degree::priceArraySize];
-		if (row[0] == 'F')
+		int darray[Degree::dayArraySize];
+
+		cout << studentData[lastIndex];
+		cout << "\n";
+		if (studentData[lastIndex].find("SOFTWARE") != string::npos)
 		{
-			this->degrees[lastIndex] = new FictionBook();
-			degrees[lastIndex]->setBookType(FICTION);
+			this->degrees[lastIndex] = new Software();
+			degrees[lastIndex]->setDegreeType(SOFTWARE);
 		}
-		else if (row[0] == 'N') {
-			this->degrees[lastIndex] = new NonfictionBook();
-			degrees[lastIndex]->setBookType(NONFICTION);
+		else if (studentData[lastIndex].find("NETWORK") != string::npos) 
+		{
+			this->degrees[lastIndex] = new Networking();
+			degrees[lastIndex]->setDegreeType(NETWORKING);
 		}
-		else if (row[0] == 'N') {
-			this->degrees[lastIndex] = new NonfictionBook();
-			degrees[lastIndex]->setBookType(NONFICTION);
+		else if (studentData[lastIndex].find("SECURITY") != string::npos) 
+		{
+			this->degrees[lastIndex] = new Security();
+			degrees[lastIndex]->setDegreeType(SECURITY);
 		}
 		else
 		{
@@ -38,31 +47,36 @@ void Repository::parseAdd(string row) {
 			exit(-1);
 		}
 
-		int rhs = studentData[lastIndex].find(",");
-		degrees[lastIndex]->setID(studentData[lastIndex].substr(0, rhs));
+
+
+		/*int rhs = studentData[lastIndex].find(",");
+		degrees[lastIndex]->setStudentID(studentData[lastIndex].substr(0, rhs));
 
 		int lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
-		degrees[lastIndex]->setTitle(studentData[lastIndex].substr(lhs, rhs - lhs));
+		degrees[lastIndex]->setFirstName(studentData[lastIndex].substr(lhs, rhs - lhs));
 
 		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
-		degrees[lastIndex]->setAuthor(studentData[lastIndex].substr(lhs, rhs - lhs));
+		degrees[lastIndex]->setLastName(studentData[lastIndex].substr(lhs, rhs - lhs));
 
+		lhs = rhs + 1;
+		rhs = studentData[lastIndex].find(",", lhs);
+		degrees[lastIndex]->setEmailAddress(studentData[lastIndex].substr(lhs, rhs - lhs));
 		
 		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
-		parray[0] = stod(studentData[lastIndex].substr(lhs, rhs - lhs));
+		darray[0] = stod(studentData[lastIndex].substr(lhs, rhs - lhs));
 
 		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
-		parray[1] = stod(studentData[lastIndex].substr(lhs, rhs - lhs));
+		darray[1] = stod(studentData[lastIndex].substr(lhs, rhs - lhs));
 
 		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
-		parray[2] = stod(studentData[lastIndex].substr(lhs, rhs - lhs));
+		darray[2] = stod(studentData[lastIndex].substr(lhs, rhs - lhs));
 
-		degrees[lastIndex]->setPrices(parray);
+		degrees[lastIndex]->setDays(darray);*/
 	}
 	else
 	{
@@ -72,13 +86,15 @@ void Repository::parseAdd(string row) {
 }
 
 int main() {
-	cout << numBooks;
-	cout << "\n";
+	Repository * rep = new Repository(numStudents);
+	cout << "Displaying all degrees:\n";
 
-	for (int i = 0; i < numBooks; i++) {
-		cout << studentData[i];
-		cout << "\n";
+	for (int i = 0; i < numStudents; i++) {
+		rep->parseAdd(studentData[i]);
 	}
+
+
+
 	system("pause");
 	return 0;
 }
