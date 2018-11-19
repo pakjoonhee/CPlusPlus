@@ -42,7 +42,7 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
 	}
 	else
 	{
-		cerr << "INVALID DEGREE TYPE!  EXITING NOW!\n";
+		cerr << "INVALID DEGREE TYPE! WILL EXIT NOW!\n";
 		exit(-1);
 	}
 
@@ -59,7 +59,7 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
 
 void Roster::printInvalidEmails()
 {
-	cout << "Displaying invalid price entries:\n";
+	cout << "Displaying invalid email entries:\n";
 	for (int i = 0; i <= index; i++)
 	{
 		cout << "Student ID: " << classRosterArray[i]->getStudentID() << ": ";
@@ -154,7 +154,7 @@ void Roster::parseAdd(string row) {
 	}
 }
 
-void Roster::print_All()
+void Roster::printAll()
 {
 	for (int i = 0; i <= this->index; i++) {
 		(this->classRosterArray)[i]->print();
@@ -177,7 +177,7 @@ bool Roster::remove(string ID)
 	return found;
 }
 
-void Roster::printDaysInCourse(string studentID)
+void Roster::printAverageDaysInCourse(string studentID)
 {
 	bool found = false;
 	for (int i = 0; i <= index; i++)
@@ -192,56 +192,55 @@ void Roster::printDaysInCourse(string studentID)
 	if (!found) cout << "Student not found!\n";
 }
 
-void Roster::printByDegreeProgram(DegreeProgram b)
+void Roster::printByDegreeProgram(DegreeProgram d)
 {
-	cout << "Printing degree of type " << degreeProgramStrings[b] << "\n";
+	cout << "Printing degree of type " << degreeProgramStrings[d] << "\n";
 	for (int i = 0; i <= index; i++) {
-		if (this->classRosterArray[i]->getStudentProgram() == b) this->classRosterArray[i]->print();
+		if (this->classRosterArray[i]->getStudentProgram() == d) this->classRosterArray[i]->print();
 	}
 }
 
 int main() {
 	Roster * rep = new Roster(numStudents);
-	cout << "Displaying all classRosterArray:\n";
+	cout << "Displaying all Students:\n";
 
 	for (int i = 0; i < numStudents; i++) {
 		rep->parseAdd(studentData[i]);
 	}
 	//print_all
-	rep->print_All();
+	rep->printAll();
 	cout << "\n";
 
 	//checking email validity
 	rep->printInvalidEmails();
+	cout << "\n";
 
 	//average days
-	rep->printDaysInCourse("A1");
+	rep->printAverageDaysInCourse("A1");
 	cout << "\n";
 
 	//print by degree program
 	rep->printByDegreeProgram(SOFTWARE);
-	rep->printByDegreeProgram(SECURITY);
-	rep->printByDegreeProgram(NETWORK);
 	cout << "\n";
 
 	//remove student
-	cout << "Removing A4:\n";
-	if (rep->remove("A3")) rep->print_All();
+	cout << "Removing A3:\n";
+	if (rep->remove("A3")) rep->printAll();
 	else cout << "Student not found!\n";
 	cout << "\n";
 
 	//remove student again
-	cout << "Removing A4:\n";
-	if (rep->remove("A3")) rep->print_All();
+	cout << "Removing A3:\n";
+	if (rep->remove("A3")) rep->printAll();
 	else cout << "Student with this ID was not found!\n";
 	cout << "\n";
 
-	//add student
-	rep->add("A3", "Jack", "Napoli", "The_Lawyer99yahoo.com", 19, 20, 40, 33, SOFTWARE);
+	////add student
+	//rep->add("A3", "Jack", "Napoli", "The_Lawyer99yahoo.com", 19, 20, 40, 33, SOFTWARE);
 
-	//checking after adding
-	rep->print_All();
-	cout << "\n";
+	////checking after adding
+	//rep->printAll();
+	//cout << "\n";
 
 
 	system("pause");
