@@ -18,6 +18,9 @@
     <ClCompile Include="repository.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="degree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="repository.h">

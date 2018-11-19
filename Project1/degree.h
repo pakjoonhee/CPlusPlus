@@ -15,7 +15,7 @@ protected:
 	DegreeType type;
 
 public:
-	const static int priceArraySize = 3;
+	const static int dayArraySize = 3;
 	Degree();
 	Degree(string studentID, string firstName, string lastName, string emailAddress, int age, 
 		int days[], DegreeType type);
@@ -23,7 +23,7 @@ public:
 	string getStudentID();
 	string getFirstName();
 	string getLastName();
-	string getEmailAddresses();
+	string getEmailAddress();
 	int getAge();
 	int* getDays();
 	virtual DegreeType getDegreeType() = 0;
@@ -31,7 +31,7 @@ public:
 	void setStudentID(string studentID);
 	void setFirstName(string firstName);
 	void setLastName(string lastName);
-	void setEmailAddresses(string emailAddress);
+	void setEmailAddress(string emailAddress);
 	void getAge(int age);
 	void setDays(int days[]);
 	virtual void setDegreeType(DegreeType b) = 0;
