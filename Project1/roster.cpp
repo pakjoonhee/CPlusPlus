@@ -70,7 +70,17 @@ void Roster::printInvalidEmails()
 		if (classRosterArray[i]->getEmailAddress().find("@") == -1)
 		{
 			any = true;
-			cout << " Error: No @ symbol found";
+			cout << "Error: No @ symbol found";
+		}
+		else if (classRosterArray[i]->getEmailAddress().find(".") == -1)
+		{
+			any = true;
+			cout << "Error: No . symbol found";
+		}
+		else if (classRosterArray[i]->getEmailAddress().find(' ') != -1)
+		{
+			any = true;
+			cout << "Error: Found a space";
 		}
 
 		if (!any) cout << "NONE";
