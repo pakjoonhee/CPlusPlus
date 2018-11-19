@@ -14,18 +14,19 @@ string studentData[numStudents] =
 	"A5,Joonhee,Pak,pakjoonhee90@gmail.com,28,10,12,4,SOFTWARE"
 };
 
-class Repository {
+class Roster {
 public:
-	int lastIndex;
+	int index;
 	int capacity;
-	Student** degrees;
-	Repository();
-	Repository(int capacity);
+	Student** classRosterArray;
+	Roster();
+	Roster(int capacity);
 	void parseAdd(string datarow);
 	void print_All();
-	bool remove(string bookID);
-	void printAverageDays(string studentID);
-	void printInvalidDayEntries();
+	bool remove(string studentID);
+	void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
+	void printDaysInCourse(string studentID);
+	void printInvalidEmails();
 	void printByDegreeProgram(DegreeProgram b);
-	~Repository();
+	~Roster();
 };

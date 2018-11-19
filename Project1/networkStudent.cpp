@@ -4,28 +4,28 @@ using std::cout;
 
 NetworkStudent::NetworkStudent()
 {
-	setStudentProgram(NETWORKING);
+	setStudentProgram(NETWORK);
 }
 
 NetworkStudent::NetworkStudent(string degreeID, string firstName, string lastName, string emailAddress, int * prices, DegreeProgram degreeProgram)
 {
-	setStudentProgram(NETWORKING);
+	setStudentProgram(NETWORK);
 }
 
 DegreeProgram NetworkStudent::getStudentProgram()
 {
-	return NETWORKING;
+	return NETWORK;
 }
 
 void NetworkStudent::setStudentProgram(DegreeProgram b)
 {
-	this->type = NETWORKING;
+	this->type = NETWORK;
 }
 
 void NetworkStudent::print()
 {
 	this->Student::print();
-	cout << "NETWORKING" << "\n";
+	cout << "NETWORK" << "\n";
 }
 
 NetworkStudent::~NetworkStudent()

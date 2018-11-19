@@ -1,2 +1,5 @@
-﻿  student.cpp
+﻿  roster.cpp
+c:\users\pakjo\desktop\project1\project1\roster.cpp(128): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\pakjo\desktop\project1\project1\roster.cpp(132): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\pakjo\desktop\project1\project1\roster.cpp(136): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   Project1.vcxproj -> C:\Users\pakjo\Desktop\Project1\Debug\Project1.exe
