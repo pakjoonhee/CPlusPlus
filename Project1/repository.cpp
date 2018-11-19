@@ -24,8 +24,8 @@ void Repository::parseAdd(string row) {
 		lastIndex++;
 		int darray[Degree::dayArraySize];
 
-		cout << studentData[lastIndex];
-		cout << "\n";
+		/*cout << studentData[lastIndex];
+		cout << "\n";*/
 		if (studentData[lastIndex].find("SOFTWARE") != string::npos)
 		{
 			this->degrees[lastIndex] = new Software();
@@ -48,23 +48,31 @@ void Repository::parseAdd(string row) {
 		}
 
 
-
-		/*int rhs = studentData[lastIndex].find(",");
+		int rhs = studentData[lastIndex].find(",");
+		//cout << studentData[lastIndex].substr(0, rhs) << ' ';
 		degrees[lastIndex]->setStudentID(studentData[lastIndex].substr(0, rhs));
 
 		int lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
+		//cout << studentData[lastIndex].substr(lhs, rhs - lhs) << ' ';
 		degrees[lastIndex]->setFirstName(studentData[lastIndex].substr(lhs, rhs - lhs));
 
 		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
+		//cout << studentData[lastIndex].substr(lhs, rhs - lhs) << ' ';
 		degrees[lastIndex]->setLastName(studentData[lastIndex].substr(lhs, rhs - lhs));
 
 		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
+		//cout << studentData[lastIndex].substr(lhs, rhs - lhs) << ' ';
 		degrees[lastIndex]->setEmailAddress(studentData[lastIndex].substr(lhs, rhs - lhs));
-		
+
 		lhs = rhs + 1;
+		rhs = studentData[lastIndex].find(",", lhs);
+		cout << studentData[lastIndex].substr(lhs, rhs - lhs) << ' ';
+		//degrees[lastIndex]->setAge(stoi(studentData[lastIndex].substr(lhs, rhs - lhs)));
+
+		/*lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
 		darray[0] = stod(studentData[lastIndex].substr(lhs, rhs - lhs));
 

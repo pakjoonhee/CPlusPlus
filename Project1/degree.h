@@ -32,7 +32,7 @@ public:
 	void setFirstName(string firstName);
 	void setLastName(string lastName);
 	void setEmailAddress(string emailAddress);
-	void getAge(int age);
+	void setAge(int age);
 	void setDays(int days[]);
 	virtual void setDegreeType(DegreeType b) = 0;
 	virtual void print() = 0;
