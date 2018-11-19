@@ -47,32 +47,26 @@ void Repository::parseAdd(string row) {
 			exit(-1);
 		}
 
-
 		int rhs = studentData[lastIndex].find(",");
-		//cout << studentData[lastIndex].substr(0, rhs) << ' ';
 		degrees[lastIndex]->setStudentID(studentData[lastIndex].substr(0, rhs));
 
 		int lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
-		//cout << studentData[lastIndex].substr(lhs, rhs - lhs) << ' ';
 		degrees[lastIndex]->setFirstName(studentData[lastIndex].substr(lhs, rhs - lhs));
 
 		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
-		//cout << studentData[lastIndex].substr(lhs, rhs - lhs) << ' ';
 		degrees[lastIndex]->setLastName(studentData[lastIndex].substr(lhs, rhs - lhs));
 
 		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
-		//cout << studentData[lastIndex].substr(lhs, rhs - lhs) << ' ';
 		degrees[lastIndex]->setEmailAddress(studentData[lastIndex].substr(lhs, rhs - lhs));
 
 		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
-		cout << studentData[lastIndex].substr(lhs, rhs - lhs) << ' ';
-		//degrees[lastIndex]->setAge(stoi(studentData[lastIndex].substr(lhs, rhs - lhs)));
+		degrees[lastIndex]->setAge(stoi(studentData[lastIndex].substr(lhs, rhs - lhs)));
 
-		/*lhs = rhs + 1;
+		lhs = rhs + 1;
 		rhs = studentData[lastIndex].find(",", lhs);
 		darray[0] = stod(studentData[lastIndex].substr(lhs, rhs - lhs));
 
@@ -84,13 +78,18 @@ void Repository::parseAdd(string row) {
 		rhs = studentData[lastIndex].find(",", lhs);
 		darray[2] = stod(studentData[lastIndex].substr(lhs, rhs - lhs));
 
-		degrees[lastIndex]->setDays(darray);*/
+		degrees[lastIndex]->setDays(darray);
 	}
 	else
 	{
 		cerr << "ERROR! LIST HAS EXCEEDED MAXIMUM CAPACITY!\n EXITING NOW!";
 		exit(-1);
 	}
+}
+
+void Repository::print_All()
+{
+	for (int i = 0; i <= this->lastIndex; i++) (this->degrees)[i]->print();
 }
 
 int main() {
@@ -101,6 +100,7 @@ int main() {
 		rep->parseAdd(studentData[i]);
 	}
 
+	rep->print_All();
 
 
 	system("pause");

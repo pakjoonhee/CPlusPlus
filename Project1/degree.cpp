@@ -75,6 +75,11 @@ void Degree::setEmailAddress(string emailAddress)
 	this->emailAddress = emailAddress;
 }
 
+void Degree::setAge(int age)
+{
+	this->emailAddress = emailAddress;
+}
+
 void Degree::setDays(int days[])
 {
 	if (this->days != nullptr) {
