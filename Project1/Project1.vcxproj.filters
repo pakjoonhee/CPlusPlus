@@ -21,6 +21,15 @@
     <ClCompile Include="degree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="softwaredegree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="securitydegree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="networkingdegree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="repository.h">

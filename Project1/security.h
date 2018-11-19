@@ -9,9 +9,10 @@ public:
 	Security();
 	Security(
 		string degreeID,
-		string title,
-		string author,
-		double* prices,
+		string firstName,
+		string lastName,
+		string emailAddress,
+		int* days,
 		DegreeType degreeType
 	);
 	DegreeType getDegreeType();

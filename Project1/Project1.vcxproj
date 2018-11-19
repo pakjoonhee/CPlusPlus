@@ -116,7 +116,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="degree.cpp" />
+    <ClCompile Include="networkingdegree.cpp" />
     <ClCompile Include="repository.cpp" />
+    <ClCompile Include="securitydegree.cpp" />
+    <ClCompile Include="softwaredegree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="degree.h" />

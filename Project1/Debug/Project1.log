@@ -1,4 +1,6 @@
-﻿  degree.cpp
+﻿  networkingdegree.cpp
   repository.cpp
+  securitydegree.cpp
+  softwaredegree.cpp
   Generating Code...
   Project1.vcxproj -> C:\Users\pakjo\Desktop\Project1\Debug\Project1.exe
