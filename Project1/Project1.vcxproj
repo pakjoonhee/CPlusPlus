@@ -124,10 +124,10 @@
   <ItemGroup>
     <ClInclude Include="degree.h" />
     <ClInclude Include="degreetype.h" />
-    <ClInclude Include="networking.h" />
+    <ClInclude Include="networkstudent.h" />
     <ClInclude Include="repository.h" />
-    <ClInclude Include="security.h" />
-    <ClInclude Include="software.h" />
+    <ClInclude Include="securitystudent.h" />
+    <ClInclude Include="softwarestudent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

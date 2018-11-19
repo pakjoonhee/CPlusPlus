@@ -1,8 +1,8 @@
 #include <iostream>
 #include "repository.h"
-#include "security.h"
-#include "software.h"
-#include "networking.h"
+#include "securitystudent.h"
+#include "softwarestudent.h"
+#include "networkstudent.h"
 using std::cout;
 using std::cerr;
 using std::string;
@@ -28,18 +28,18 @@ void Repository::parseAdd(string row) {
 		cout << "\n";*/
 		if (studentData[lastIndex].find("SOFTWARE") != string::npos)
 		{
-			this->degrees[lastIndex] = new Software();
-			degrees[lastIndex]->setDegreeType(SOFTWARE);
+			this->degrees[lastIndex] = new SoftwareStudent();
+			degrees[lastIndex]->setDegreeProgram(SOFTWARE);
 		}
 		else if (studentData[lastIndex].find("NETWORK") != string::npos) 
 		{
-			this->degrees[lastIndex] = new Networking();
-			degrees[lastIndex]->setDegreeType(NETWORKING);
+			this->degrees[lastIndex] = new NetworkingStudent();
+			degrees[lastIndex]->setDegreeProgram(NETWORKING);
 		}
 		else if (studentData[lastIndex].find("SECURITY") != string::npos) 
 		{
-			this->degrees[lastIndex] = new Security();
-			degrees[lastIndex]->setDegreeType(SECURITY);
+			this->degrees[lastIndex] = new SecurityStudent();
+			degrees[lastIndex]->setDegreeProgram(SECURITY);
 		}
 		else
 		{
@@ -89,7 +89,9 @@ void Repository::parseAdd(string row) {
 
 void Repository::print_All()
 {
-	for (int i = 0; i <= this->lastIndex; i++) (this->degrees)[i]->print();
+	for (int i = 0; i <= this->lastIndex; i++) {
+		(this->degrees)[i]->print();
+	}
 }
 
 int main() {

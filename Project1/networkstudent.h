@@ -3,11 +3,11 @@
 #include "degreetype.h"
 #include "degree.h"
 
-class Networking : public Degree
+class NetworkingStudent : public Degree
 {
 public:
-	Networking();
-	Networking(
+	NetworkingStudent();
+	NetworkingStudent(
 		string degreeID,
 		string firstName,
 		string lastName,
@@ -15,10 +15,10 @@ public:
 		int* days,
 		DegreeType degreeType
 	);
-	DegreeType getDegreeType();
-	void setDegreeType(DegreeType b);
+	DegreeType getDegreeProgram();
+	void setDegreeProgram(DegreeType b);
 	void print();
 
-	~Networking();
+	~NetworkingStudent();
 };
 

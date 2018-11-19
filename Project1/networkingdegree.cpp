@@ -1,34 +1,34 @@
 #include <iostream>
-#include "networking.h"
+#include "networkstudent.h"
 using std::cout;
 
-Networking::Networking()
+NetworkingStudent::NetworkingStudent()
 {
-	setDegreeType(NETWORKING);
+	setDegreeProgram(NETWORKING);
 }
 
-Networking::Networking(string degreeID, string firstName, string lastName, string emailAddress, int * prices, DegreeType degreeType)
+NetworkingStudent::NetworkingStudent(string degreeID, string firstName, string lastName, string emailAddress, int * prices, DegreeType degreeType)
 {
-	setDegreeType(NETWORKING);
+	setDegreeProgram(NETWORKING);
 }
 
-DegreeType Networking::getDegreeType()
+DegreeType NetworkingStudent::getDegreeProgram()
 {
 	return NETWORKING;
 }
 
-void Networking::setDegreeType(DegreeType b)
+void NetworkingStudent::setDegreeProgram(DegreeType b)
 {
 	this->type = NETWORKING;
 }
 
-void Networking::print()
+void NetworkingStudent::print()
 {
 	this->Degree::print();
 	cout << "NETWORKING" << "\n";
 }
 
-Networking::~Networking()
+NetworkingStudent::~NetworkingStudent()
 {
 	Degree::~Degree();
 	delete this;

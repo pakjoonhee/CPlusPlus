@@ -41,13 +41,13 @@
     <ClInclude Include="degree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="software.h">
+    <ClInclude Include="securitystudent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="networking.h">
+    <ClInclude Include="softwarestudent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="security.h">
+    <ClInclude Include="networkstudent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

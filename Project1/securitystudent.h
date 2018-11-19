@@ -3,11 +3,11 @@
 #include "degreetype.h"
 #include "degree.h"
 
-class Security : public Degree
+class SecurityStudent : public Degree
 {
 public:
-	Security();
-	Security(
+	SecurityStudent();
+	SecurityStudent(
 		string degreeID,
 		string firstName,
 		string lastName,
@@ -15,10 +15,10 @@ public:
 		int* days,
 		DegreeType degreeType
 	);
-	DegreeType getDegreeType();
-	void setDegreeType(DegreeType b);
+	DegreeType getDegreeProgram();
+	void setDegreeProgram(DegreeType b);
 	void print();
 
-	~Security();
+	~SecurityStudent();
 };
 

@@ -26,7 +26,7 @@ public:
 	string getEmailAddress();
 	int getAge();
 	int* getDays();
-	virtual DegreeType getDegreeType() = 0;
+	virtual DegreeType getDegreeProgram() = 0;
 
 	void setStudentID(string studentID);
 	void setFirstName(string firstName);
@@ -34,7 +34,7 @@ public:
 	void setEmailAddress(string emailAddress);
 	void setAge(int age);
 	void setDays(int days[]);
-	virtual void setDegreeType(DegreeType b) = 0;
+	virtual void setDegreeProgram(DegreeType b) = 0;
 	virtual void print() = 0;
 
 	~Degree();

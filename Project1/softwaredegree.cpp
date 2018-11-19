@@ -1,34 +1,34 @@
 #include <iostream>
-#include "software.h"
+#include "softwarestudent.h"
 using std::cout;
 
-Software::Software()
+SoftwareStudent::SoftwareStudent()
 {
-	setDegreeType(SOFTWARE);
+	setDegreeProgram(SOFTWARE);
 }
 
-Software::Software(string degreeID, string firstName, string lastName, string emailAddress, int * prices, DegreeType degreeType)
+SoftwareStudent::SoftwareStudent(string degreeID, string firstName, string lastName, string emailAddress, int * prices, DegreeType degreeType)
 {
-	setDegreeType(SOFTWARE);
+	setDegreeProgram(SOFTWARE);
 }
 
-DegreeType Software::getDegreeType()
+DegreeType SoftwareStudent::getDegreeProgram()
 {
 	return SOFTWARE;
 }
 
-void Software::setDegreeType(DegreeType b)
+void SoftwareStudent::setDegreeProgram(DegreeType b)
 {
 	this->type = SOFTWARE;
 }
 
-void Software::print()
+void SoftwareStudent::print()
 {
 	this->Degree::print();
 	cout << "SOFTWARE" << "\n";
 }
 
-Software::~Software()
+SoftwareStudent::~SoftwareStudent()
 {
 	Degree::~Degree();
 	delete this;
