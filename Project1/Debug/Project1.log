@@ -1,10 +1,2 @@
-﻿  degree.cpp
-  networkingdegree.cpp
-  repository.cpp
-c:\users\pakjo\desktop\project1\project1\repository.cpp(71): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\pakjo\desktop\project1\project1\repository.cpp(75): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\pakjo\desktop\project1\project1\repository.cpp(79): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  securitydegree.cpp
-  softwaredegree.cpp
-  Generating Code...
+﻿  student.cpp
   Project1.vcxproj -> C:\Users\pakjo\Desktop\Project1\Debug\Project1.exe

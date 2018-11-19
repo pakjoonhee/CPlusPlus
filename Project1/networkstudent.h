@@ -1,24 +1,24 @@
 #pragma once
 #include <string>
-#include "degreetype.h"
 #include "degree.h"
+#include "student.h"
 
-class NetworkingStudent : public Degree
+class NetworkStudent : public Student
 {
 public:
-	NetworkingStudent();
-	NetworkingStudent(
+	NetworkStudent();
+	NetworkStudent(
 		string degreeID,
 		string firstName,
 		string lastName,
 		string emailAddress,
 		int* days,
-		DegreeType degreeType
+		DegreeProgram degreeProgram
 	);
-	DegreeType getDegreeProgram();
-	void setDegreeProgram(DegreeType b);
+	DegreeProgram getStudentProgram();
+	void setStudentProgram(DegreeProgram b);
 	void print();
 
-	~NetworkingStudent();
+	~NetworkStudent();
 };
 

@@ -15,39 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="repository.cpp">
+    <ClCompile Include="roster.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="degree.cpp">
+    <ClCompile Include="networkStudent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="softwaredegree.cpp">
+    <ClCompile Include="securityStudent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="securitydegree.cpp">
+    <ClCompile Include="softwareStudent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="networkingdegree.cpp">
+    <ClCompile Include="student.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="repository.h">
+    <ClInclude Include="student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="degreetype.h">
+    <ClInclude Include="roster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="softwareStudent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="securityStudent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="networkStudent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="degree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="securitystudent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="softwarestudent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="networkstudent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

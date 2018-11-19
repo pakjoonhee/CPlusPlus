@@ -1,9 +1,9 @@
 #pragma once
 #include <string>
-#include "degreetype.h"
 #include "degree.h"
+#include "student.h"
 
-class SoftwareStudent : public Degree
+class SoftwareStudent : public Student
 {
 public:
 	SoftwareStudent();
@@ -13,10 +13,10 @@ public:
 		string lastName,
 		string emailAddress,
 		int* days,
-		DegreeType degreeType
+		DegreeProgram degreeProgram
 	);
-	DegreeType getDegreeProgram();
-	void setDegreeProgram(DegreeType b);
+	DegreeProgram getStudentProgram();
+	void setStudentProgram(DegreeProgram b);
 	void print();
 
 	~SoftwareStudent();

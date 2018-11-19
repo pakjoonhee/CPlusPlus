@@ -115,19 +115,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="degree.cpp" />
-    <ClCompile Include="networkingdegree.cpp" />
-    <ClCompile Include="repository.cpp" />
-    <ClCompile Include="securitydegree.cpp" />
-    <ClCompile Include="softwaredegree.cpp" />
+    <ClCompile Include="student.cpp" />
+    <ClCompile Include="networkStudent.cpp" />
+    <ClCompile Include="roster.cpp" />
+    <ClCompile Include="securityStudent.cpp" />
+    <ClCompile Include="softwareStudent.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="student.h" />
     <ClInclude Include="degree.h" />
-    <ClInclude Include="degreetype.h" />
-    <ClInclude Include="networkstudent.h" />
-    <ClInclude Include="repository.h" />
-    <ClInclude Include="securitystudent.h" />
-    <ClInclude Include="softwarestudent.h" />
+    <ClInclude Include="networkStudent.h" />
+    <ClInclude Include="roster.h" />
+    <ClInclude Include="securityStudent.h" />
+    <ClInclude Include="softwareStudent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
