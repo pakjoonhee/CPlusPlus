@@ -28,17 +28,17 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
 	if (degreeProgram == SOFTWARE)
 	{
 		this->classRosterArray[index] = new SoftwareStudent();
-		classRosterArray[index]->setStudentProgram(SOFTWARE);
+		classRosterArray[index]->setDegreeProgram(SOFTWARE);
 	}
 	else if (degreeProgram == NETWORK)
 	{
 		this->classRosterArray[index] = new NetworkStudent();
-		classRosterArray[index]->setStudentProgram(NETWORK);
+		classRosterArray[index]->setDegreeProgram(NETWORK);
 	}
 	else if (degreeProgram == SECURITY)
 	{
 		this->classRosterArray[index] = new SecurityStudent();
-		classRosterArray[index]->setStudentProgram(SECURITY);
+		classRosterArray[index]->setDegreeProgram(SECURITY);
 	}
 	else
 	{
@@ -96,17 +96,17 @@ void Roster::parseAdd(string row) {
 		if (studentData[index].find("SOFTWARE") != string::npos)
 		{
 			this->classRosterArray[index] = new SoftwareStudent();
-			classRosterArray[index]->setStudentProgram(SOFTWARE);
+			classRosterArray[index]->setDegreeProgram(SOFTWARE);
 		}
 		else if (studentData[index].find("NETWORK") != string::npos) 
 		{
 			this->classRosterArray[index] = new NetworkStudent();
-			classRosterArray[index]->setStudentProgram(NETWORK);
+			classRosterArray[index]->setDegreeProgram(NETWORK);
 		}
 		else if (studentData[index].find("SECURITY") != string::npos) 
 		{
 			this->classRosterArray[index] = new SecurityStudent();
-			classRosterArray[index]->setStudentProgram(SECURITY);
+			classRosterArray[index]->setDegreeProgram(SECURITY);
 		}
 		else
 		{
@@ -196,7 +196,7 @@ void Roster::printByDegreeProgram(DegreeProgram d)
 {
 	cout << "Printing degree of type " << degreeProgramStrings[d] << "\n";
 	for (int i = 0; i <= index; i++) {
-		if (this->classRosterArray[i]->getStudentProgram() == d) this->classRosterArray[i]->print();
+		if (this->classRosterArray[i]->getDegreeProgram() == d) this->classRosterArray[i]->print();
 	}
 }
 

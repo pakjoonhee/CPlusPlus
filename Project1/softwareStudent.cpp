@@ -4,20 +4,20 @@ using std::cout;
 
 SoftwareStudent::SoftwareStudent()
 {
-	setStudentProgram(SOFTWARE);
+	setDegreeProgram(SOFTWARE);
 }
 
 SoftwareStudent::SoftwareStudent(string degreeID, string firstName, string lastName, string emailAddress, int * prices, DegreeProgram degreeProgram)
 {
-	setStudentProgram(SOFTWARE);
+	setDegreeProgram(SOFTWARE);
 }
 
-DegreeProgram SoftwareStudent::getStudentProgram()
+DegreeProgram SoftwareStudent::getDegreeProgram()
 {
 	return SOFTWARE;
 }
 
-void SoftwareStudent::setStudentProgram(DegreeProgram b)
+void SoftwareStudent::setDegreeProgram(DegreeProgram b)
 {
 	this->type = SOFTWARE;
 }

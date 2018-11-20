@@ -15,8 +15,8 @@ public:
 		int* days,
 		DegreeProgram degreeProgram
 	);
-	DegreeProgram getStudentProgram();
-	void setStudentProgram(DegreeProgram b);
+	DegreeProgram getDegreeProgram();
+	void setDegreeProgram(DegreeProgram b);
 	void print();
 
 	~SoftwareStudent();
